@@ -10,7 +10,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>{{ page.title }}</title>
+  <title>Civic Workbench</title>
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="assets/css/foundation.css">
@@ -33,11 +33,48 @@
     <div class="row">
       <div class="twelve columns centered">
         <div class="main">
-          {% include nav.html %}
+          <!-- Navigation -->
+<nav>
+	<a href="/">
+		<img src="/assets/images/civic-workbench-logo--web.png"/>
+	</a>
+</nav>
 
           <div id="wrapper"><!-- Main page content -->
 
-          	{{ content }}
+          	<div class="row">
+  <div class="small-8 columns small-push-2">
+    <div class="main__headline">
+      <h2>Civic Workbench creates tools for (more) vibrant online communities. We're just getting started.</h2>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="text--centered main__headline">
+      <h3> Projects in development</h3>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 medium-4 medium-push-2 columns">
+    <i class="fa fa-comments fa-5x"></i>
+    <h3>FilterKit</h3>
+    <p>Status: Gathering user input
+    <br>Team lead: Jonathan Eyler-Werve
+    <br>Contact: jonathan@eylerwerve.com</p>
+  </div>
+
+  <div class="small-12 medium-4 medium-pull-2 columns">
+    <i class="fa fa-inbox fa-5x"></i>
+    <h3>InboxAssist</h3>
+    <p>Status: Gathering user input
+    <br>Team lead: Jonathan Eyler-Werve
+    <br>Contact: jonathan@eylerwerve.com</p>
+  </div>
+</div>
 
           </div><!-- /wrapper -->
 
