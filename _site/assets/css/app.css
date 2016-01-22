@@ -1,50 +1,58 @@
-@font-face{
-  font-family: 'Nexa Bold';
-  src: url('Nexa_Free_Bold-webfont.eot');
-  src: url('Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('Nexa_Free_Bold-webfont.woff') format('woff'),
-       url('Nexa_Free_Bold-webfont.ttf') format('truetype'),
-       url('Nexa_Free_Bold-webfont.svg#webfont') format('svg');
-}
-
-@font-face{
-  font-family: 'Nexa Light';
-  src: url('Nexa_Free_Light-webfont.eot');
-  src: url('Nexa_Free_Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('Nexa_Free_Light-webfont.woff') format('woff'),
-       url('Nexa_Free_Light-webfont.ttf') format('truetype'),
-       url('Nexa_Free_Light-webfont.svg#webfont') format('svg');
-}
-
+@font-face {
+  font-family: "Nexa Bold";
+  src: url("Nexa_Free_Bold-webfont.eot");
+  src: url("Nexa_Free_Bold-webfont.eot?#iefix") format("embedded-opentype"), url("Nexa_Free_Bold-webfont.woff") format("woff"), url("Nexa_Free_Bold-webfont.ttf") format("truetype"), url("Nexa_Free_Bold-webfont.svg#webfont") format("svg"); }
+@font-face {
+  font-family: "Nexa Light";
+  src: url("Nexa_Free_Light-webfont.eot");
+  src: url("Nexa_Free_Light-webfont.eot?#iefix") format("embedded-opentype"), url("Nexa_Free_Light-webfont.woff") format("woff"), url("Nexa_Free_Light-webfont.ttf") format("truetype"), url("Nexa_Free_Light-webfont.svg#webfont") format("svg"); }
+body {
+  color: #333333; }
 
 nav ul li {
-	display: inline;
-	padding-right: 25px;
-}
+  display: inline;
+  padding-right: 25px; }
 
 nav {
-  text-align: center;
-}
+  text-align: center; }
 
 body {
   background-color: #eeeeee;
-  font-family: 'Nexa Light', Helvetica, Ariel, sans-serif; !important
-}
+  font-family: "Nexa Light", Helvetica, Ariel, sans-serif !important; }
 
 i {
+  color: #ff0033; }
+
+a {
   color: #ff0033;
-}
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.text--centered {
+  text-align: center; }
+
+.text--accent {
+  color: #ff0033; }
+
+.text--secondary {
+  color: #999999; }
+
+.text--subhead {
+  text-transform: uppercase; }
 
 .main {
   background-color: #ffffff;
-  padding: 50px;
-}
+  padding: 50px; }
 
 .main__headline {
   padding-top: 50px;
-  text-align: center;
-}
+  text-align: center; }
 
-.text--centered {
-  text-align: center;
-}
+.list__item h2 {
+  margin-top: 10px;
+  margin-bottom: 0px; }
+
+.list__item p {
+  margin-top: 5px; }

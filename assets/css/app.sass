@@ -1,0 +1,80 @@
+---
+---
+
+
+
+// fonts
+
+@font-face
+  font-family: 'Nexa Bold'
+  src: url('Nexa_Free_Bold-webfont.eot')
+  src: url('Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('Nexa_Free_Bold-webfont.woff') format('woff'), url('Nexa_Free_Bold-webfont.ttf') format('truetype'), url('Nexa_Free_Bold-webfont.svg#webfont') format('svg')
+
+@font-face
+  font-family: 'Nexa Light'
+  src: url('Nexa_Free_Light-webfont.eot')
+  src: url('Nexa_Free_Light-webfont.eot?#iefix') format('embedded-opentype'), url('Nexa_Free_Light-webfont.woff') format('woff'), url('Nexa_Free_Light-webfont.ttf') format('truetype'), url('Nexa_Free_Light-webfont.svg#webfont') format('svg')
+
+// variables
+
+$color-primary: #333333
+$color-accent: #ff0033
+$color-secondary: #999999
+$color-action: $color-accent
+
+// defaults
+
+body
+  color: $color-primary
+
+nav ul li
+  display: inline
+  padding-right: 25px
+
+nav
+  text-align: center
+
+body
+  background-color: #eeeeee
+  font-family: 'Nexa Light', Helvetica, Ariel, sans-serif !important
+
+i
+  color: $color-accent
+
+a
+  color: $color-action
+  text-decoration: none
+
+a:hover
+  text-decoration: underline
+
+// text
+
+.text--centered
+  text-align: center
+
+.text--accent
+  color: $color-accent
+
+.text--secondary
+  color: $color-secondary
+
+.text--subhead
+  text-transform: uppercase
+
+// blocks
+
+.main
+  background-color: #ffffff
+  padding: 50px
+
+.main__headline
+  padding-top: 50px
+  text-align: center
+
+.list__item h2
+  margin-top: 10px
+  margin-bottom: 0px
+
+.list__item p
+  margin-top: 5px
