@@ -1,6 +1,10 @@
 ---
 ---
 
+// resets
+
+.mailchimp.button
+  background-color: #999
 
 
 // fonts
@@ -50,11 +54,11 @@ a:hover
 
 // background
 
-$image-homepage: url(../images/foo.jpg)
+$image-homepage: url(../images/homepage-002.png)
 $image-placeholder-big: url('http://placehold.it/1000x800')
 
-html.cover
-  background: $image-placeholder-big no-repeat center center fixed
+html.cover body
+  background: $image-homepage no-repeat center center fixed
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
