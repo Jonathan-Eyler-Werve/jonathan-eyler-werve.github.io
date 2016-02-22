@@ -1,26 +1,87 @@
 ---
 ---
 
+// VARIABLES
+
+$color-black: #202324
+$color-white: #FFFFFF
+$color-gray: #525A5C
+$color-lemon: #FFFAD4
+$color-seametal: #004173
+$color-bluemars: #5d92b4
+$color-rash: #FF66AA
+
+$color-primary: #333333
+$color-accent: #ff0033
+$color-secondary: #999999
+$color-action: $color-accent
+
+$color-bodytext: darken($color-seametal, 25%)
+$color-accent-darkest: darken($color-accent, 25%)
+$color-gray-lightest: lighten($color-gray, 60%)
+
+$font-sans: 'Cabin', Helvetica, Ariel, sans-serif
+$font-serif: 'Vollkorn', Times, serif
+
+$padding-standard: 30px
+$padding-big: 50px
+
+// FOUNDATION OVERRIDES
+
+body
+  background-color: $color-gray-lightest
+  color: $color-bodytext
+  font-family: $font-serif
+  font-size: 18px
+  line-height: 28px
+
+ul
+  padding-left: 15px
+
+li
+  list-style-type: circle
+
+h1, h2, h3, h4, h5, h6, .button, button
+  font-family: $font-sans
+
+i
+  color: $color-accent
+
+a
+  color: $color-action
+  text-decoration: none
+
+a.button
+  color: $color-white
+  background-color: $color-action
+
+a:hover
+  text-decoration: underline
+  color: darken($color-action, 10%)
+
+a:hover.button
+  text-decoration: none
+  background-color: darken($color-action, 10%)
+
+blockquote, blockquote p
+  color: $color-secondary
 
 
 // fonts
 
 @font-face
   font-family: 'Nexa Bold'
-  src: url('Nexa_Free_Bold-webfont.eot')
-  src: url('Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('Nexa_Free_Bold-webfont.woff') format('woff'), url('Nexa_Free_Bold-webfont.ttf') format('truetype'), url('Nexa_Free_Bold-webfont.svg#webfont') format('svg')
+  src: url('/assets/fonts/Nexa_Free_Bold-webfont.eot')
+  src: url('/assets/fonts/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Nexa_Free_Bold-webfont.woff') format('woff'), url('/assets/fonts/Nexa_Free_Bold-webfont.ttf') format('truetype'), url('/assets/fonts/Nexa_Free_Bold-webfont.svg#webfont') format('svg')
 
 @font-face
   font-family: 'Nexa Light'
-  src: url('Nexa_Free_Light-webfont.eot')
-  src: url('Nexa_Free_Light-webfont.eot?#iefix') format('embedded-opentype'), url('Nexa_Free_Light-webfont.woff') format('woff'), url('Nexa_Free_Light-webfont.ttf') format('truetype'), url('Nexa_Free_Light-webfont.svg#webfont') format('svg')
+  src: url('/assets/fonts/Nexa_Free_Light-webfont.eot')
+  src: url('/assets/fonts/Nexa_Free_Light-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Nexa_Free_Light-webfont.woff') format('woff'), url('/assets/fonts/Nexa_Free_Light-webfont.ttf') format('truetype'), url('/assets/fonts/Nexa_Free_Light-webfont.svg#webfont') format('svg')
 
 // variables
 
-$color-primary: #333333
-$color-accent: #ff0033
-$color-secondary: #999999
-$color-action: $color-accent
+
 
 // defaults
 
@@ -35,8 +96,8 @@ nav
   text-align: center
 
 body
-  background-color: #eeeeee
-  font-family: 'Nexa Light', Helvetica, Ariel, sans-serif !important
+  // background-color: #eeeeee
+  font-family: 'Nexa Light', Helvetica, Ariel, sans-serif
 
 i
   color: $color-accent
@@ -47,6 +108,18 @@ a
 
 a:hover
   text-decoration: underline
+
+// background
+
+$image-homepage: url(../images/homepage-002.png)
+$image-placeholder-big: url('http://placehold.it/1000x800')
+
+html.cover body
+  background: $image-homepage no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
 // text
 
@@ -65,7 +138,7 @@ a:hover
 // blocks
 
 .main
-  background-color: #ffffff
+  // background-color: #ffffff
   padding: 50px
 
 .main__headline
