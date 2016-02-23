@@ -1,10 +1,32 @@
 ---
 ---
 
+// MEDIA QUERY STUFF
+
+// example media query:
+// @media #{$medium-up}
+
+$medium-breakpoint: 640px !default
+$large-breakpoint: 1024px !default
+$xlarge-breakpoint: 1920px !default
+
+$screen: "only screen" !default
+
+$landscape: "#{$screen} and (orientation: landscape)" !default
+$portrait: "#{$screen} and (orientation: portrait)" !default
+
+$small-up: $screen !default
+$small-only: "#{$screen} and (max-width: #{$medium-breakpoint})" !default
+$medium-up: "#{$screen} and (min-width:#{$medium-breakpoint})" !default
+$medium-only: "#{$screen} and (min-width:#{$medium-breakpoint}) and (max-width:#{$large-breakpoint})" !default
+$large-up: "#{$screen} and (min-width:#{$large-breakpoint})" !default
+$large-only: "#{$screen} and (min-width:#{$large-breakpoint}) and (max-width:#{$xlarge-breakpoint})" !default
+
+
 // VARIABLES
 
 $color-black: #202324
-$color-white: #FFFFFF
+$color-white: #FCFCFC
 $color-gray: #525A5C
 $color-lemon: #FFFAD4
 $color-seametal: #004173
@@ -96,7 +118,7 @@ nav
   text-align: center
 
 body
-  // background-color: #eeeeee
+  background-color: $color-white
   font-family: 'Nexa Light', Helvetica, Ariel, sans-serif
 
 i
@@ -114,12 +136,14 @@ a:hover
 $image-homepage: url(../images/homepage-002.png)
 $image-placeholder-big: url('http://placehold.it/1000x800')
 
-html.cover body
-  background: $image-homepage no-repeat center center fixed
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
+
+@media #{$large-up}
+  html.cover body
+    background: $image-homepage no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
 
 // text
 
