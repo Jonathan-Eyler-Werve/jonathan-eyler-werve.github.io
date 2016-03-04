@@ -1,16 +1,16 @@
-# FilterScout
+# Floodgate
 
 Trigger warning: discussing abuse and harassment.
 
 ## Summary
 
-FilterScout is a browser extension allows User to set rules for content display, muting unwanted content on the Web, including social media websites. Twitter, Facebook, Reddit, newspapers, blogs can be filtered.
+Floodgate is a browser extension allows a user to set rules for content display, muting unwanted content on the Web, including social media websites. Twitter, Facebook, Reddit, newspapers, blogs can be filtered.
 
 Contact: Jonathan Eyler-Werve - jonathan@eylerwerve.com
 
 Code: [github.com/Jonathan-Eyler-Werve/filter-scout](https://github.com/Jonathan-Eyler-Werve/filter-scout)
 
-Current status: user research and proof-of-concept
+Current status: prototype deployed
 
 ## Problem we're solving
 
