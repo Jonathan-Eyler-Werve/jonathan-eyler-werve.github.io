@@ -37,8 +37,14 @@ $color-action: $color-accent
 $color-bodytext: darken($color-primary, 25%)
 $color-accent-darkest: darken($color-accent, 25%)
 
-$font-sans: 'Cabin', Helvetica, Ariel, sans-serif
+$font-sans: 'Nexa Light', Helvetica, Ariel, sans-serif
+$font-sans-heavy: 'Nexa Heavy', Helvetica, Ariel, sans-serif
 $font-serif: 'Vollkorn', Times, serif
+
+$fast: 0.2s
+$slow: 1s
+$radius-standard: 3px
+$radius-button: $radius-standard
 
 $padding-standard: 30px
 $padding-big: 50px
@@ -48,10 +54,9 @@ $padding-big: 50px
 body
   background-color: $color-lightest
   color: $color-bodytext
-  font-family: $font-serif
+  font-family: $font-sans
   font-size: 18px
   line-height: 28px
-  font-family: 'Nexa Light', Helvetica, Ariel, sans-serif
 
 ul
   padding-left: 15px
@@ -59,8 +64,14 @@ ul
 li
   list-style-type: circle
 
-h1, h2, h3, h4, h5, h6, .button, button
+h1, h2, h3, h4, h5, h6,
   font-family: $font-sans
+
+.button, button
+  font-family: $font-sans-heavy
+
+.button.radius, button.radius
+  border-radius: $radius-button
 
 i
   color: $color-accent
@@ -145,6 +156,13 @@ $image-placeholder-big: url('http://placehold.it/1000x800')
 .text--subhead
   text-transform: uppercase
 
+// box styling (no positioning!)
+
+.box--shadow
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.2)
+  -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.2)
+  box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.2)
+
 // blocks
 
 .site-header
@@ -155,9 +173,15 @@ $image-placeholder-big: url('http://placehold.it/1000x800')
 .site-header__logo img
   height: 40px
   margin-top: 10px
+  transition: opacity $fast
+
+.site-header__logo img:hover
+  opacity: .7
+  transition: opacity $fast
 
 .site-header__links
   text-align: right
+  font-family: $font-sans
 
 .site-header__links li a
   margin-top: 22px
@@ -166,18 +190,30 @@ $image-placeholder-big: url('http://placehold.it/1000x800')
   font-size: 14px
   font-weight: 600
   color: $color-secondary
+  transition: color $fast
   letter-spacing: 1px
 
 .site-header__links li a:hover
   text-decoration: none
+  color: lighten($color-secondary, 25%)
+  transition: color $fast
+
 
 .main
-  // background-color: #ffffff
-  padding: 50px
 
 .main__headline
-  padding-top: 50px
+  padding-left: 80px
+
+  margin-top: 160px
   text-align: center
+
+.main__cta
+  margin-top: 30px
+
+.main__demo-img
+  margin-top: 60px
+
+
 
 .list__item h2
   margin-top: 10px
