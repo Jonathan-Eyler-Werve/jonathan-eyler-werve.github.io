@@ -22,7 +22,6 @@ $medium-only: "#{$screen} and (min-width:#{$medium-breakpoint}) and (max-width:#
 $large-up: "#{$screen} and (min-width:#{$large-breakpoint})" !default
 $large-only: "#{$screen} and (min-width:#{$large-breakpoint}) and (max-width:#{$xlarge-breakpoint})" !default
 
-
 // VARIABLES
 
 $color-black: #202324
@@ -67,6 +66,15 @@ li
 h1, h2, h3, h4, h5, h6,
   font-family: $font-sans
 
+@media #{$small-only}
+  h1
+    font-size: 32px
+  h2
+    font-size: 28px
+  h3
+    font-size: 24px
+
+
 .button, button
   font-family: $font-sans-heavy
 
@@ -107,10 +115,6 @@ blockquote, blockquote p
   font-family: 'Nexa Light'
   src: url('/assets/fonts/Nexa_Free_Light-webfont.eot')
   src: url('/assets/fonts/Nexa_Free_Light-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Nexa_Free_Light-webfont.woff') format('woff'), url('/assets/fonts/Nexa_Free_Light-webfont.ttf') format('truetype'), url('/assets/fonts/Nexa_Free_Light-webfont.svg#webfont') format('svg')
-
-// variables
-
-
 
 // defaults
 
@@ -201,9 +205,9 @@ $image-placeholder-big: url('http://placehold.it/1000x800')
 // .main
 
 .main__headline
-  padding-left: 80px
-
-  margin-top: 160px
+  padding-left: 20px
+  padding-right: 20px
+  margin-top: 100px
   text-align: center
 
 .main__cta
@@ -212,21 +216,38 @@ $image-placeholder-big: url('http://placehold.it/1000x800')
 
 .main__demo-img
   margin-top: 100px
+  display: none
 
-// .mailchimp
+@media #{$medium-up}
+  .main__demo-img
+    display: block
+  .main__headline
+    margin-top: 160px
+    padding-left: 80px
+    padding-right: 0px
+
+// .mailchimp -- signup embedding
 
 .mailchimp
   padding: 12px
 
 .mailchimp input[type="email"]
-  width: 80%
+  width: 100%
   clear: none
-  float: left
+
   position: relative
   height: 40px
 
 .mailchimp input[type="submit"]
-  width: 20%
+  width: 100%
+
+@media #{$medium-up}
+  .mailchimp input[type="email"]
+    width: 80%
+    float: left
+
+  .mailchimp input[type="submit"]
+    width: 20%
 
 // .docs
 
